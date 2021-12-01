@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação IPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Votação</h1>
+
+    <div class="reg_form">
+        <p>Cadastrar um novo candidato</p>
+        <form id="new-candidate">
+            <input type="text" name="nome" id="candidate-name">
+            <select id="category">
+                <option value="presb">Presbítero</option>
+                <option value="diac">Diácono</option>
+            </select>
+            <button type="button" onclick="newCandidate()">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="main_div">
+        <div class="sub_div">
+            <h2>Registro de Voto</h2>
+        
+            <form id="form">
+                <fieldset id="presbs-field">
+                    <legend class="legend">Presbíteros</legend>
+                    
+                    <!--
+                    candidatos serão adicionados aqui
+                    -->
+                    
+                </fieldset>
+                
+                <fieldset id="diacs-field">
+                    <legend class="legend">Diáconos</legend>
+                    
+                    <!--
+                    candidatos serão adicionados aqui
+                    -->
+
+                </fieldset>
+                
+                <button type="button" id="saveVote-btn" onclick="saveVote()">Registrar Voto</button>
+            </form>
+        </div>
+
+        <div class="sub_div">
+            <h2>Resultado</h2>
+
+            <fieldset>
+                <legend class="legend">Presbíteros</legend>
+                
+                <!--
+                    RESULTADOS SERÃO EXIBIDOS AQUI
+                -->
+
+            </fieldset>
+
+            <fieldset>
+                <legend class="legend">Diáconos</legend>
+
+                <!--
+                    RESULTADOS SERÃO EXIBIDOS AQUI
+                -->
+
+            </fieldset>
+
+            <div class="total_div">
+                <span class="total">Total de votos:</span>
+                <span class="total" id="votos-el">0</span>
+            </div>
+            
+                        
+        </div>
+    </div>
+    
+
+    <script src="newApp.js"></script>
+</body>
+</html>

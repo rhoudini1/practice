@@ -1,0 +1,83 @@
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    background: #ddd;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+fieldset {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+}
+
+    .legend {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+.main_div {
+    display: flex;
+}
+
+.sub_div {
+    padding: 0px 6.25% 0 6.25%;
+}
+
+.votos {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.total_div {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 25%;
+}
+
+#saveVote-btn {
+    -moz-box-shadow:    inset 0px 1px 0px 0px #4d73bf;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #4d73bf;
+    box-shadow:         inset 0px 1px 0px 0px #4d73bf;
+    background: #4267b2;
+    border: 1px solid #4267b2;
+    color: #fff;
+    text-shadow: 0 1px 0px #3359a5;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+    #regVoto-el:hover {
+        background: #2b54a7;
+    }
+
+    #regVoto-el:active {
+        background: #1d4698;
+        border-color: #1d4698;
+    }
+
+/* CHECKBOXES */
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+  margin-bottom: 0.5rem;
+}

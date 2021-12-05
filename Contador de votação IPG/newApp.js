@@ -49,12 +49,12 @@ function newCandidate() {
 
 
 function renderPresbs() {
-    let presbsRendered = ""
+    let presbsRendered = `<legend class="legend">Presbíteros</legend>`
     for (let i=0; i < presbs.length; i++) {
         presbsRendered += `<div>
             <input type="checkbox" name="candidato" id="candidatoA">
             <label for="${presbs[i]}">${presbs[i].name}</label>
-            <button onclick="deleteCandidate()">Excluir</button>
+            <button type="button" onclick="deletePresb(${i})">Excluir</button>
         </div>`
     }
     presbsField.innerHTML = presbsRendered
@@ -64,12 +64,12 @@ function renderPresbs() {
 
 
 function renderDiacs() {
-    let diacsRendered = ""
+    let diacsRendered = `<legend class="legend">Diáconos</legend>`
     for (let i=0; i < diacs.length; i++) {
         diacsRendered += `<div>
             <input type="checkbox" name="candidato" id="candidatoA">
             <label for="${diacs[i]}">${diacs[i].name}</label>
-            <button onclick="deleteCandidate()">Excluir</button>
+            <button type="button" onclick="deleteDiac(${i})">Excluir</button>
         </div>`
     }
     diacsField.innerHTML = diacsRendered
@@ -77,21 +77,23 @@ function renderDiacs() {
     // ADICIONAR RENDER DO RESULTADO
 }
 
+
+function deletePresb(id) {
+    // apagar do array com filter para ficar sem vazios
+    presbs.splice(id, 1).filter(e => e !== "")
+    renderPresbs()
+}
+
+function deleteDiac(id) {
+    diacs.splice(id, 1).filter(e => e !== "")
+    renderDiacs()
+}
+
+
 function saveVote() {
     //captar botões
 
     // fulano.votes++
 
     // checkboxes.value = null
-}
-
-function deleteCandidate() {
-    // apagar do array
-
-
-    //aplicar filter para array ficar bonitinho
-
-    // renderPresbs() ou renderDiacs()
-
-    console.log("candidato excluido")
 }

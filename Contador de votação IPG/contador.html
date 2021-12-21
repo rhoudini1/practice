@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Votação</h1>
+    <div class="title">
+        <h1>Votação</h1>
+    </div>
 
     <div class="reg_form">
-        <p>Cadastrar um novo candidato</p>
+        <p>Cadastrar um novo candidato:</p>
         <form id="new-candidate">
             <input type="text" name="nome" id="candidate-name">
             <select id="category">
@@ -52,7 +54,7 @@
         <div class="sub_div">
             <h2>Resultado</h2>
 
-            <fieldset>
+            <fieldset id="presbs-results">
                 <legend class="legend">Presbíteros</legend>
                 
                 <!--
@@ -61,7 +63,7 @@
 
             </fieldset>
 
-            <fieldset>
+            <fieldset id="diacs-results">
                 <legend class="legend">Diáconos</legend>
 
                 <!--
